@@ -22,7 +22,7 @@ xml_tree.SubElement(channel_elemennt, 'itunes:image', {'herf': link_prefix + yam
 xml_tree.SubElement(channel_elemennt, 'language').text = yaml_data['language']
 xml_tree.SubElement(channel_elemennt, 'link').text = link_prefix
 
-xml_tree.SubElement(channel_elemennt, 'itunes:category', {'text': yaml_data['category']})
+xml_tree.SubElement(channel_elemennt, 'itunes:category').text = yaml_data['category']
 
 for item in yaml_data['item']:
     item_element = xml_tree.SubElement(channel_elemennt, 'item')
