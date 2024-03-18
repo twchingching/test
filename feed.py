@@ -1,3 +1,4 @@
+from operator import itemgetter
 import yaml
 import xml.etree.ElementTree as xml_tree
 
@@ -34,8 +35,8 @@ for item in yaml_data['item']:
 
     enclosure = xml_tree.SubElement(item_element, 'enclosure', {
         'url': link_prefix + item['file'],
-        type: 'audio/mpeg',
-        'length': item['length']
+        'length': item['length'],
+        'type': 'audio/mpeg',
     })
 
 output_tree = xml_tree.ElementTree(rss_element)
