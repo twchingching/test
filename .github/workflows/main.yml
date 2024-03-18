@@ -12,9 +12,9 @@ jobs:
           python-version: '3.10'
       - name: Install Dependencies
         run: |
-          python -m pip insttall --upggrade pip
+          python -m pip install --upgrade pip
           pip install pyyaml
-      - name: Run Feed Gnerator
+      - name: Run Feed Generator
         run: python feed.py
       - name: Push Repo
         run: |
